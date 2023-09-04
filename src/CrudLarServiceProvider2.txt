@@ -1,0 +1,24 @@
+<?php
+
+namespace Cachorios\CrudLar;
+
+use Cachorios\CrudLar\Console\InstallCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
+
+class CrudLarServiceProvider extends PackageServiceProvider
+{
+
+    public function configurePackage(Package $package): void
+    {
+        $package
+            ->name('crud-lar')
+            ->hasConfigFile()
+            ->hasViews()
+            //->hasMigration('create_crud-lar_table')
+
+            ->hasCommand(InstallCommand::class)
+            //->hasInstallCommand(InstallCommand::class);
+        ;
+    }
+}
