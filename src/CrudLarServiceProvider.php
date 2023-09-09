@@ -58,7 +58,7 @@ class CrudLarServiceProvider extends ServiceProvider
                 InstallCommand::class
             ]);
 
-            Artisan::call('crudlar:install');
+         //   Artisan::call('crudlar:install');
         }
     }
 }
